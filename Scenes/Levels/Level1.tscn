@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6l311xh7hpr5"]
+
+[ext_resource type="PackedScene" uid="uid://g1hjtebu6chm" path="res://Scenes/Box.tscn" id="1_bnd87"]
+[ext_resource type="PackedScene" uid="uid://b3v5wv6omu65q" path="res://Scenes/Spike.tscn" id="2_kt6gv"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="Box" parent="." instance=ExtResource("1_bnd87")]
+position = Vector2(712, 632)
+
+[node name="Box2" parent="." instance=ExtResource("1_bnd87")]
+position = Vector2(744, 632)
+
+[node name="Spike" parent="." instance=ExtResource("2_kt6gv")]
+position = Vector2(728, 600)

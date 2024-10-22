@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://efcjupq2inx0"]
+
+[ext_resource type="PackedScene" uid="uid://ceubvde0cgifc" path="res://Scenes/Norway.tscn" id="1_5m7ca"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_bxbqk"]
+size = Vector2(1500, 50)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3xtf0"]
+distance = 24.0
+
+[node name="World" type="Node2D" groups=["World"]]
+
+[node name="Norway" parent="." instance=ExtResource("1_5m7ca")]
+position = Vector2(80, 608)
+
+[node name="Ground" type="StaticBody2D" parent="."]
+z_index = 1
+position = Vector2(472, 648)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Ground"]
+mesh = SubResource("QuadMesh_bxbqk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+shape = SubResource("WorldBoundaryShape2D_3xtf0")
+
+[node name="WallLeft" type="StaticBody2D" parent="."]
+position = Vector2(0, 384)
+rotation = 1.5708
+metadata/_edit_group_ = true
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="WallLeft"]
+mesh = SubResource("QuadMesh_bxbqk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft"]
+shape = SubResource("WorldBoundaryShape2D_3xtf0")
+
+[node name="Finish" type="StaticBody2D" parent="." groups=["Finish"]]
+position = Vector2(1152, 384)
+rotation = -1.5708
+metadata/_edit_group_ = true
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Finish"]
+modulate = Color(0, 0.645617, 0.293595, 1)
+mesh = SubResource("QuadMesh_bxbqk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Finish"]
+shape = SubResource("WorldBoundaryShape2D_3xtf0")
+
+[node name="Level" type="Node2D" parent="."]
+position = Vector2(0, -24)
