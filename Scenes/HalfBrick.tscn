@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkqi1nu14ehfl"]
+
+[ext_resource type="Texture2D" uid="uid://cyocsc3d677ar" path="res://Assets/HalfBrick.png" id="1_jkwub"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dh3ql"]
+size = Vector2(16, 32)
+
+[node name="HalfBrick" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_jkwub")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 0)
+shape = SubResource("RectangleShape2D_dh3ql")

@@ -86,19 +86,3 @@ rotation = 1.5708
 [node name="Spike17" parent="." instance=ExtResource("1_t5uif")]
 position = Vector2(16, 528)
 rotation = 1.5708
-
-[node name="Spike18" parent="." instance=ExtResource("1_t5uif")]
-position = Vector2(16, 560)
-rotation = 1.5708
-
-[node name="Spike19" parent="." instance=ExtResource("1_t5uif")]
-position = Vector2(16, 592)
-rotation = 1.5708
-
-[node name="Spike20" parent="." instance=ExtResource("1_t5uif")]
-position = Vector2(16, 624)
-rotation = 1.5708
-
-[node name="Spike21" parent="." instance=ExtResource("1_t5uif")]
-position = Vector2(16, 656)
-rotation = 1.5708

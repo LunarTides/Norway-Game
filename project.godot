@@ -22,6 +22,8 @@ Game="*res://Scripts/Game.gd"
 
 [display]
 
+window/size/viewport_width=1024
+window/size/viewport_height=512
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
 window/vsync/vsync_mode=0

@@ -11,11 +11,11 @@ distance = 24.0
 [node name="World" type="Node2D" groups=["World"]]
 
 [node name="Norway" parent="." instance=ExtResource("1_5m7ca")]
-position = Vector2(80, 608)
+position = Vector2(80, 472)
 
 [node name="Ground" type="StaticBody2D" parent="."]
 z_index = 1
-position = Vector2(472, 648)
+position = Vector2(472, 512)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Ground"]
@@ -36,7 +36,7 @@ mesh = SubResource("QuadMesh_bxbqk")
 shape = SubResource("WorldBoundaryShape2D_3xtf0")
 
 [node name="Finish" type="StaticBody2D" parent="." groups=["Finish"]]
-position = Vector2(1152, 384)
+position = Vector2(1024, 376)
 rotation = -1.5708
 metadata/_edit_group_ = true
 

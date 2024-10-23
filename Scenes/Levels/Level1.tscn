@@ -1,60 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://b6l311xh7hpr5"]
+[gd_scene load_steps=3 format=4 uid="uid://b6l311xh7hpr5"]
 
-[ext_resource type="PackedScene" uid="uid://g1hjtebu6chm" path="res://Scenes/Box.tscn" id="1_bnd87"]
-[ext_resource type="PackedScene" uid="uid://b3v5wv6omu65q" path="res://Scenes/Spike.tscn" id="2_kt6gv"]
-[ext_resource type="PackedScene" uid="uid://c7a1ju66q6mr" path="res://Scenes/KeyDoor.tscn" id="3_k788h"]
-[ext_resource type="PackedScene" uid="uid://chwcpfkm0a030" path="res://Scenes/Key.tscn" id="4_hsld5"]
-[ext_resource type="PackedScene" uid="uid://ciuxxnb8nkal" path="res://Scenes/Sweden.tscn" id="5_getcx"]
-[ext_resource type="PackedScene" uid="uid://ojimp7tnu6ph" path="res://Scenes/Denmark.tscn" id="6_mxutr"]
-[ext_resource type="PackedScene" uid="uid://2yi6r6blhudf" path="res://Scenes/Iceland.tscn" id="7_agy0b"]
 [ext_resource type="PackedScene" uid="uid://b3snmngor6lf2" path="res://Scenes/SpikeWall.tscn" id="8_cl1lq"]
+[ext_resource type="TileSet" uid="uid://gnjyl0us5rl5" path="res://TileSet.tres" id="9_0wk6y"]
 
 [node name="Level1" type="Node2D"]
 
-[node name="Box" parent="." instance=ExtResource("1_bnd87")]
-position = Vector2(712, 632)
-
-[node name="Box2" parent="." instance=ExtResource("1_bnd87")]
-position = Vector2(744, 632)
-
-[node name="Spike" parent="." instance=ExtResource("2_kt6gv")]
-position = Vector2(728, 600)
-
-[node name="KeyDoor" parent="." instance=ExtResource("3_k788h")]
-position = Vector2(1112, 600)
-
-[node name="Key" parent="." instance=ExtResource("4_hsld5")]
-position = Vector2(840, 520)
-
-[node name="Key3" parent="." instance=ExtResource("4_hsld5")]
-position = Vector2(528, 552)
-
-[node name="Key2" parent="." instance=ExtResource("4_hsld5")]
-position = Vector2(656, 520)
-
-[node name="Sweden" parent="." instance=ExtResource("5_getcx")]
-position = Vector2(776, 432)
-
-[node name="Sweden2" parent="." instance=ExtResource("5_getcx")]
-position = Vector2(1048, 480)
-
-[node name="Denmark" parent="." instance=ExtResource("6_mxutr")]
-position = Vector2(896, 472)
-
-[node name="Denmark2" parent="." instance=ExtResource("6_mxutr")]
-position = Vector2(656, 448)
-
-[node name="Denmark3" parent="." instance=ExtResource("6_mxutr")]
-position = Vector2(896, 392)
-
-[node name="Iceland" parent="Denmark3" instance=ExtResource("7_agy0b")]
-position = Vector2(-64, -40)
-
-[node name="Iceland2" parent="Denmark3" instance=ExtResource("7_agy0b")]
-position = Vector2(112, 8)
-
-[node name="Iceland3" parent="Denmark3" instance=ExtResource("7_agy0b")]
-position = Vector2(200, -80)
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAANAA0AAAAAAAAABAARAAkAAAAAAAAAAgATAA8AAAAAAAAAAQAYAAgAAAAAAAAAAgAYAAsAAAAAAAAAAgASAA8AAAAAAAAACQATAA4AAAAAAAAABgAWAAYAAAAAAAAAAwARAAsAAAAAAAAABAAcAAkAAAAAAAAACAAZAAkAAAAAAAAACAARAAQAAAAAAAAACAAXAAwAAAAAAAAABAAeAA4AAAAAAAAABQA=")
+tile_set = ExtResource("9_0wk6y")
 
 [node name="SpikeWall" parent="." instance=ExtResource("8_cl1lq")]
 speed = 100
