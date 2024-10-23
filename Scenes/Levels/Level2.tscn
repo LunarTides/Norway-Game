@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://crwhkw8etmfkg"]
+[gd_scene load_steps=6 format=3 uid="uid://crwhkw8etmfkg"]
 
 [ext_resource type="PackedScene" uid="uid://g1hjtebu6chm" path="res://Scenes/Box.tscn" id="1_y2xqd"]
 [ext_resource type="PackedScene" uid="uid://b3v5wv6omu65q" path="res://Scenes/Spike.tscn" id="2_dhhgq"]
 [ext_resource type="PackedScene" uid="uid://chwcpfkm0a030" path="res://Scenes/Key.tscn" id="3_0d0kv"]
 [ext_resource type="PackedScene" uid="uid://c7a1ju66q6mr" path="res://Scenes/KeyDoor.tscn" id="4_3ahsj"]
+[ext_resource type="PackedScene" uid="uid://b3snmngor6lf2" path="res://Scenes/SpikeWall.tscn" id="5_tpc7f"]
 
 [node name="Level1" type="Node2D"]
 
@@ -15,6 +16,15 @@ position = Vector2(712, 632)
 
 [node name="Box3" parent="." instance=ExtResource("1_y2xqd")]
 position = Vector2(920, 600)
+
+[node name="Box4" parent="." instance=ExtResource("1_y2xqd")]
+position = Vector2(952, 632)
+
+[node name="Box6" parent="." instance=ExtResource("1_y2xqd")]
+position = Vector2(920, 632)
+
+[node name="Box5" parent="." instance=ExtResource("1_y2xqd")]
+position = Vector2(984, 632)
 
 [node name="Spike" parent="." instance=ExtResource("2_dhhgq")]
 position = Vector2(648, 632)
@@ -37,14 +47,11 @@ position = Vector2(856, 632)
 [node name="Spike6" parent="." instance=ExtResource("2_dhhgq")]
 position = Vector2(888, 632)
 
-[node name="Spike7" parent="." instance=ExtResource("2_dhhgq")]
-position = Vector2(920, 632)
-
 [node name="Spike9" parent="." instance=ExtResource("2_dhhgq")]
-position = Vector2(952, 632)
+position = Vector2(952, 600)
 
 [node name="Spike10" parent="." instance=ExtResource("2_dhhgq")]
-position = Vector2(984, 632)
+position = Vector2(984, 600)
 
 [node name="Spike11" parent="." instance=ExtResource("2_dhhgq")]
 position = Vector2(1016, 632)
@@ -57,3 +64,7 @@ position = Vector2(1048, 632)
 
 [node name="KeyDoor" parent="." instance=ExtResource("4_3ahsj")]
 position = Vector2(1112, 600)
+
+[node name="SpikeWall" parent="." instance=ExtResource("5_tpc7f")]
+speed = 350
+offset = 350

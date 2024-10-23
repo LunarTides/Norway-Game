@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b6l311xh7hpr5"]
+[gd_scene load_steps=9 format=3 uid="uid://b6l311xh7hpr5"]
 
 [ext_resource type="PackedScene" uid="uid://g1hjtebu6chm" path="res://Scenes/Box.tscn" id="1_bnd87"]
 [ext_resource type="PackedScene" uid="uid://b3v5wv6omu65q" path="res://Scenes/Spike.tscn" id="2_kt6gv"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ciuxxnb8nkal" path="res://Scenes/Sweden.tscn" id="5_getcx"]
 [ext_resource type="PackedScene" uid="uid://ojimp7tnu6ph" path="res://Scenes/Denmark.tscn" id="6_mxutr"]
 [ext_resource type="PackedScene" uid="uid://2yi6r6blhudf" path="res://Scenes/Iceland.tscn" id="7_agy0b"]
+[ext_resource type="PackedScene" uid="uid://b3snmngor6lf2" path="res://Scenes/SpikeWall.tscn" id="8_cl1lq"]
 
 [node name="Level1" type="Node2D"]
 
@@ -23,13 +24,13 @@ position = Vector2(728, 600)
 position = Vector2(1112, 600)
 
 [node name="Key" parent="." instance=ExtResource("4_hsld5")]
-position = Vector2(888, 592)
+position = Vector2(840, 520)
 
 [node name="Key3" parent="." instance=ExtResource("4_hsld5")]
-position = Vector2(952, 592)
+position = Vector2(528, 552)
 
 [node name="Key2" parent="." instance=ExtResource("4_hsld5")]
-position = Vector2(824, 592)
+position = Vector2(656, 520)
 
 [node name="Sweden" parent="." instance=ExtResource("5_getcx")]
 position = Vector2(776, 432)
@@ -54,3 +55,6 @@ position = Vector2(112, 8)
 
 [node name="Iceland3" parent="Denmark3" instance=ExtResource("7_agy0b")]
 position = Vector2(200, -80)
+
+[node name="SpikeWall" parent="." instance=ExtResource("8_cl1lq")]
+speed = 100

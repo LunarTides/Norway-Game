@@ -11,9 +11,10 @@ config_version=5
 [application]
 
 config/name="Norway"
+config/version="0.1.0"
 run/main_scene="res://Scenes/World.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://Assets/Norway.png"
 
 [autoload]
 
@@ -23,6 +24,7 @@ Game="*res://Scripts/Game.gd"
 
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
+window/vsync/vsync_mode=0
 
 [global_group]
 
@@ -55,3 +57,4 @@ jump={
 [rendering]
 
 renderer/rendering_method="mobile"
+2d/snap/snap_2d_transforms_to_pixel=true

@@ -1,0 +1,104 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3snmngor6lf2"]
+
+[ext_resource type="Script" path="res://Scripts/SpikeWall.gd" id="1_f8qc0"]
+[ext_resource type="PackedScene" uid="uid://b3v5wv6omu65q" path="res://Scenes/Spike.tscn" id="1_t5uif"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_83l1v"]
+size = Vector2(2000, 1500)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_n51m8"]
+normal = Vector2(1, 0)
+
+[node name="SpikeWall" type="StaticBody2D"]
+script = ExtResource("1_f8qc0")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(-1000, 0)
+mesh = SubResource("QuadMesh_83l1v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("WorldBoundaryShape2D_n51m8")
+
+[node name="Spike" parent="." instance=ExtResource("1_t5uif")]
+position = Vector2(16, 16)
+rotation = 1.5708
+
+[node name="Spike2" parent="." instance=ExtResource("1_t5uif")]
+position = Vector2(16, 48)
+rotation = 1.5708
+
+[node name="Spike3" parent="." instance=ExtResource("1_t5uif")]
+position = Vector2(16, 80)
+rotation = 1.5708
+
+[node name="Spike4" parent="." instance=ExtResource("1_t5uif")]
+position = Vector2(16, 112)
+rotation = 1.5708
+
+[node name="Spike5" parent="." instance=ExtResource("1_t5uif")]
+position = Vector2(16, 144)
+rotation = 1.5708
+
+[node name="Spike6" parent="." instance=ExtResource("1_t5uif")]
+position = Vector2(16, 176)
+rotation = 1.5708
+
+[node name="Spike7" parent="." instance=ExtResource("1_t5uif")]
+position = Vector2(16, 208)
+rotation = 1.5708
+
+[node name="Spike8" parent="." instance=ExtResource("1_t5uif")]
+position = Vector2(16, 240)
+rotation = 1.5708
+
+[node name="Spike9" parent="." instance=ExtResource("1_t5uif")]
+position = Vector2(16, 272)
+rotation = 1.5708
+
+[node name="Spike10" parent="." instance=ExtResource("1_t5uif")]
+position = Vector2(16, 304)
+rotation = 1.5708
+
+[node name="Spike11" parent="." instance=ExtResource("1_t5uif")]
+position = Vector2(16, 336)
+rotation = 1.5708
+
+[node name="Spike12" parent="." instance=ExtResource("1_t5uif")]
+position = Vector2(16, 368)
+rotation = 1.5708
+
+[node name="Spike13" parent="." instance=ExtResource("1_t5uif")]
+position = Vector2(16, 400)
+rotation = 1.5708
+
+[node name="Spike14" parent="." instance=ExtResource("1_t5uif")]
+position = Vector2(16, 432)
+rotation = 1.5708
+
+[node name="Spike15" parent="." instance=ExtResource("1_t5uif")]
+position = Vector2(16, 464)
+rotation = 1.5708
+
+[node name="Spike16" parent="." instance=ExtResource("1_t5uif")]
+position = Vector2(16, 496)
+rotation = 1.5708
+
+[node name="Spike17" parent="." instance=ExtResource("1_t5uif")]
+position = Vector2(16, 528)
+rotation = 1.5708
+
+[node name="Spike18" parent="." instance=ExtResource("1_t5uif")]
+position = Vector2(16, 560)
+rotation = 1.5708
+
+[node name="Spike19" parent="." instance=ExtResource("1_t5uif")]
+position = Vector2(16, 592)
+rotation = 1.5708
+
+[node name="Spike20" parent="." instance=ExtResource("1_t5uif")]
+position = Vector2(16, 624)
+rotation = 1.5708
+
+[node name="Spike21" parent="." instance=ExtResource("1_t5uif")]
+position = Vector2(16, 656)
+rotation = 1.5708
