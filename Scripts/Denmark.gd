@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 
 const SPEED = 100.0
-const JUMP_VELOCITY = -400.0
 
 
 func _physics_process(delta: float) -> void:
@@ -13,6 +12,3 @@ func _physics_process(delta: float) -> void:
 	velocity.x = -SPEED
 	
 	move_and_slide()
-	
-	if get_slide_collision_count() > 0:
-		velocity.y = JUMP_VELOCITY
