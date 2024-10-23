@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://b6l311xh7hpr5"]
+[gd_scene load_steps=5 format=3 uid="uid://b6l311xh7hpr5"]
 
 [ext_resource type="PackedScene" uid="uid://g1hjtebu6chm" path="res://Scenes/Box.tscn" id="1_bnd87"]
 [ext_resource type="PackedScene" uid="uid://b3v5wv6omu65q" path="res://Scenes/Spike.tscn" id="2_kt6gv"]
+[ext_resource type="PackedScene" uid="uid://c7a1ju66q6mr" path="res://Scenes/KeyDoor.tscn" id="3_k788h"]
+[ext_resource type="PackedScene" uid="uid://chwcpfkm0a030" path="res://Scenes/Key.tscn" id="4_hsld5"]
 
 [node name="Level1" type="Node2D"]
 
@@ -13,3 +15,15 @@ position = Vector2(744, 632)
 
 [node name="Spike" parent="." instance=ExtResource("2_kt6gv")]
 position = Vector2(728, 600)
+
+[node name="KeyDoor" parent="." instance=ExtResource("3_k788h")]
+position = Vector2(1112, 600)
+
+[node name="Key" parent="." instance=ExtResource("4_hsld5")]
+position = Vector2(888, 592)
+
+[node name="Key3" parent="." instance=ExtResource("4_hsld5")]
+position = Vector2(952, 592)
+
+[node name="Key2" parent="." instance=ExtResource("4_hsld5")]
+position = Vector2(824, 592)

@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7a1ju66q6mr"]
+
+[ext_resource type="Script" path="res://Scripts/KeyDoor.gd" id="1_dppc4"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_w27ed"]
+size = Vector2(20, 100)
+
+[sub_resource type="SphereMesh" id="SphereMesh_lox7q"]
+radius = 8.0
+height = 16.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4rr8t"]
+normal = Vector2(-1, 0)
+distance = 8.0
+
+[node name="KeyDoor" type="StaticBody2D"]
+script = ExtResource("1_dppc4")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+modulate = Color(0.650128, 0.650128, 0.650128, 1)
+mesh = SubResource("QuadMesh_w27ed")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="."]
+modulate = Color(1, 1, 0, 1)
+mesh = SubResource("SphereMesh_lox7q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("WorldBoundaryShape2D_4rr8t")
