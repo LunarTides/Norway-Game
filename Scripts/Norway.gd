@@ -30,6 +30,7 @@ func _physics_process(delta: float) -> void:
 		var collider: Node = collision.get_collider()
 		
 		if collider.is_in_group(&"Kill"):
+			Game.reload_level()
 			position = Vector2(80, 608)
 		elif collider.is_in_group(&"Finish"):
 			Game.next_level()

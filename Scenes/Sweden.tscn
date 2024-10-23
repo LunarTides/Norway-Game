@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://ciuxxnb8nkal"]
+
+[ext_resource type="Script" path="res://Scripts/Sweden.gd" id="1_6fn74"]
+[ext_resource type="Texture2D" uid="uid://bcn07jx2634tx" path="res://Assets/Sweden.png" id="2_lo4g8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2i8e2"]
+size = Vector2(32, 32)
+
+[node name="Sweden" type="CharacterBody2D" groups=["Kill"]]
+script = ExtResource("1_6fn74")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_lo4g8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2i8e2")

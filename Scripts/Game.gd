@@ -1,6 +1,9 @@
 extends Node
 
 
+signal changed_level(relative: int)
+
+
 var level := 1
 var world: Node2D:
 	get:
@@ -32,6 +35,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			previous_level()
 		elif text == "F2":
 			next_level()
+		elif text == "F3":
+			reload_level()
 
 
 func load_level(num: int) -> void:
@@ -56,8 +61,15 @@ func load_level(num: int) -> void:
 func next_level() -> void:
 	level += 1
 	load_level(level)
+	changed_level.emit(1)
 
 
 func previous_level() -> void:
 	level -= 1
 	load_level(level)
+	changed_level.emit(-1)
+
+
+func reload_level() -> void:
+	load_level(level)
+	changed_level.emit(0)
