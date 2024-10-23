@@ -16,7 +16,6 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis(&"move_left", &"move_right")
 	if direction:
 		velocity.x = direction * SPEED
@@ -24,14 +23,14 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-	
-	for i: int in get_slide_collision_count():
-		var collision := get_slide_collision(i)
-		var collider: Node = collision.get_collider()
-		
-		if collider.is_in_group(&"Kill"):
-			Game.reload_level()
-			position = Vector2(80, 608)
-		elif collider.is_in_group(&"Finish"):
-			Game.next_level()
-			position = Vector2(80, 608)
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group(&"Kill"):
+		position = Vector2(80, 608)
+		await get_tree().process_frame
+		Game.reload_level()
+	elif body.is_in_group(&"Finish"):
+		position = Vector2(80, 608)
+		await get_tree().process_frame
+		Game.next_level()

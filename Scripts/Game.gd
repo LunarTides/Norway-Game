@@ -53,7 +53,7 @@ func load_level(num: int) -> void:
 		# TODO: Show end-screen
 		return
 	
-	level_node.add_child(scene.instantiate())
+	level_node.call_deferred(&"add_child", scene.instantiate())
 	
 	load_level_timer = get_tree().create_timer(0.1)
 
