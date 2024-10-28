@@ -23,4 +23,10 @@ shape = SubResource("RectangleShape2D_pdeel")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_mo3rb")
 
+[node name="InvincibilityTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.25
+one_shot = true
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="InvincibilityTimer" to="." method="_on_invincibility_timer_timeout"]

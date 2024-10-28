@@ -2,8 +2,9 @@ class_name Player
 extends CharacterBody2D
 
 
-@export var speed = 300.0
-@export var jump_velocity = -400.0
+@export var speed := 300.0
+@export var jump_velocity := -400.0
+var is_invincible := false
 
 
 func _physics_process(delta: float) -> void:
@@ -24,6 +25,12 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group(&"Kill"):
+		if is_invincible:
+			return
+		
+		is_invincible = true
+		%InvincibilityTimer.start()
+		
 		global_position = Vector2(80, 608)
 		await get_tree().process_frame
 		global_position = Vector2(80, 608)
@@ -34,3 +41,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		await get_tree().process_frame
 		global_position = Vector2(80, 608)
 		Game.next_level()
+
+
+func _on_invincibility_timer_timeout() -> void:
+	is_invincible = false

@@ -9,7 +9,6 @@ var deaths := 0
 var world: Node2D:
 	get:
 		return get_tree().get_first_node_in_group(&"World")
-var load_level_timer: SceneTreeTimer
 
 
 # Called when the node enters the scene tree for the first time.
@@ -41,9 +40,6 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func load_level(num: int) -> void:
-	if load_level_timer && load_level_timer.time_left > 0:
-		return
-	
 	var scene: PackedScene = load("res://Scenes/Levels/Level%s.tscn" % num)
 	
 	if not world and OS.is_debug_build():
@@ -60,8 +56,6 @@ func load_level(num: int) -> void:
 		return
 	
 	level_node.call_deferred(&"add_child", scene.instantiate())
-	
-	load_level_timer = get_tree().create_timer(0.1)
 
 
 func next_level() -> void:
