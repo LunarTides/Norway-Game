@@ -27,6 +27,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		global_position = Vector2(80, 608)
 		await get_tree().process_frame
 		global_position = Vector2(80, 608)
+		Game.deaths += 1
 		Game.reload_level()
 	elif body.is_in_group(&"Finish"):
 		global_position = Vector2(80, 608)

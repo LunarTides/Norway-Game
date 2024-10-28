@@ -5,6 +5,7 @@ signal changed_level(relative: int)
 
 
 var level := 1
+var deaths := 0
 var world: Node2D:
 	get:
 		return get_tree().get_first_node_in_group(&"World")
@@ -44,13 +45,18 @@ func load_level(num: int) -> void:
 		return
 	
 	var scene: PackedScene = load("res://Scenes/Levels/Level%s.tscn" % num)
+	
+	if not world and OS.is_debug_build():
+		get_tree().change_scene_to_file("res://Scenes/World.tscn")
+		await get_tree().create_timer(0.1).timeout
+	
 	var level_node: Node2D = world.get_node(^"Level")
 	
 	for child in level_node.get_children():
 		child.queue_free()
 	
 	if not scene:
-		# TODO: Show end-screen
+		get_tree().change_scene_to_file("res://Scenes/EndScreen.tscn")
 		return
 	
 	level_node.call_deferred(&"add_child", scene.instantiate())
