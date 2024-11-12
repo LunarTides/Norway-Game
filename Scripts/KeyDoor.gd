@@ -12,7 +12,15 @@ func _ready() -> void:
 		
 		key.collected.connect(func():
 			score += 1
+			update_score_label()
 			
 			if score >= max_score:
-				queue_free()
+				$CollisionShape2D.set_deferred(&"disabled", true)
+				modulate = Color.hex(0x93939393)
 		)
+	
+	update_score_label()
+
+
+func update_score_label() -> void:
+	%Count.text = "%s / %s" % [score, max_score]

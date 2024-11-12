@@ -2,10 +2,17 @@ extends Node
 
 
 signal level_changed(relative: int, level: Level)
+signal died
 
 
 var level := 1
-var deaths := 0
+var deaths := 0:
+	set(value):
+		var old = deaths
+		deaths = value
+		
+		if deaths > old:
+			died.emit()
 var world: Node2D:
 	get:
 		return get_tree().get_first_node_in_group(&"World")

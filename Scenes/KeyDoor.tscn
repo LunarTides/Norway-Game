@@ -26,3 +26,11 @@ mesh = SubResource("SphereMesh_lox7q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("WorldBoundaryShape2D_4rr8t")
+
+[node name="Count" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = -16.0
+offset_top = -80.0
+offset_right = 24.0
+offset_bottom = -57.0
+text = "0 / ?"
