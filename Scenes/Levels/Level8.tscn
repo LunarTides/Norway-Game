@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=4 uid="uid://bqsscmw4xh4fv"]
+
+[ext_resource type="Script" uid="uid://d03nds42ykrss" path="res://Scripts/Level.gd" id="1_r8q88"]
+[ext_resource type="TileSet" uid="uid://gnjyl0us5rl5" path="res://TileSet.tres" id="2_irt0h"]
+
+[node name="Level8" type="Node2D"]
+script = ExtResource("1_r8q88")
+level_name = "Like a Cayote"
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAeAA4AAAAAAAAABQAIAA8AAAAAAAAAAQARAA0AAAAAAAAAAQARAA4AAAAAAAAAAQARAA8AAAAAAAAAAQAMAAsAAAAAAAAAAQABAAgAAAAAAAAAAQAHAAoAAAAAAAAAAQAIAAYAAAAAAAAAAQAIAAcAAAAAAAAACQAIAAgAAAAAAAAACQAIAAkAAAAAAAAACQABAAwAAAAAAAAAAQAUAAcAAAAAAAAAAQAJAAgAAAAAAAAABAAQAA0AAAAAAAAACQABAAMAAAAAAAAABAAcAAsAAAAAAAAABAASAA8AAAAAAAAAAQAEAAQAAAAAAAAACQAEAAMAAAAAAAAACQAEAAIAAAAAAAAACQAEAAEAAAAAAAAACQAEAAAAAAAAAAAACQABAAUAAAAAAAAAAQANAAIAAAAAAAAAAQANAAEAAAAAAAAABAAOAAIAAAAAAAAAAQAFAAQAAAAAAAAAAQAPAAIAAAAAAAAAAQAPAAEAAAAAAAAABAAaAAUAAAAAAAAAAQAbAAQAAAAAAAAAAQAbAAMAAAAAAAAAAQAbAAIAAAAAAAAAAQAbAAEAAAAAAAAAAQAbAAAAAAAAAAAAAQARAAQAAAAAAAAAAQAOAP//AAAAAAAAAQAOAAAAAAAAAAAAAQAOAAEAAAAAAAAAAQAbAAUAAAAAAAAAAQA=")
+tile_set = ExtResource("2_irt0h")
+
+[connection signal="body_entered" from="TileMapLayer/Key" to="TileMapLayer/Key" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@31239" to="TileMapLayer/@Area2D@31239" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@31520" to="TileMapLayer/@Area2D@31520" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@33119" to="TileMapLayer/@Area2D@33119" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@33687" to="TileMapLayer/@Area2D@33687" method="_on_body_entered"]

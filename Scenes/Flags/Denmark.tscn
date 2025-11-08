@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ojimp7tnu6ph"]
 
-[ext_resource type="Script" path="res://Scripts/Denmark.gd" id="1_6tndy"]
+[ext_resource type="Script" uid="uid://w30kqsw2fjs5" path="res://Scripts/Flags/Denmark.gd" id="1_6tndy"]
 [ext_resource type="Texture2D" uid="uid://ctfsw18qp6qy8" path="res://Assets/Denmark.png" id="2_rbq57"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r5imh"]

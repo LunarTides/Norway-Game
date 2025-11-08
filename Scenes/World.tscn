@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://efcjupq2inx0"]
 
-[ext_resource type="PackedScene" uid="uid://ceubvde0cgifc" path="res://Scenes/Norway.tscn" id="1_5m7ca"]
+[ext_resource type="PackedScene" uid="uid://ceubvde0cgifc" path="res://Scenes/Flags/Norway.tscn" id="1_5m7ca"]
 [ext_resource type="PackedScene" uid="uid://xkwc2y0ti5qj" path="res://Scenes/UI.tscn" id="2_l8c1t"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_bxbqk"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ceubvde0cgifc"]
 
 [ext_resource type="Texture2D" uid="uid://db8miwo6l5bh3" path="res://Assets/Norway.png" id="1_b66sa"]
-[ext_resource type="Script" path="res://Scripts/Norway.gd" id="1_n4q0w"]
+[ext_resource type="Script" uid="uid://c4c5kikpnvlhl" path="res://Scripts/Flags/Norway.gd" id="1_n4q0w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pdeel"]
 size = Vector2(32, 32)

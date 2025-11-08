@@ -1,12 +1,12 @@
 [gd_resource type="TileSet" load_steps=10 format=3 uid="uid://gnjyl0us5rl5"]
 
 [ext_resource type="PackedScene" uid="uid://g1hjtebu6chm" path="res://Scenes/Box.tscn" id="1_oabjd"]
-[ext_resource type="PackedScene" uid="uid://ojimp7tnu6ph" path="res://Scenes/Denmark.tscn" id="2_cw1a6"]
-[ext_resource type="PackedScene" uid="uid://2yi6r6blhudf" path="res://Scenes/Iceland.tscn" id="3_flcvb"]
+[ext_resource type="PackedScene" uid="uid://ojimp7tnu6ph" path="res://Scenes/Flags/Denmark.tscn" id="2_cw1a6"]
+[ext_resource type="PackedScene" uid="uid://2yi6r6blhudf" path="res://Scenes/Flags/Iceland.tscn" id="3_flcvb"]
 [ext_resource type="PackedScene" uid="uid://chwcpfkm0a030" path="res://Scenes/Key.tscn" id="4_bcjki"]
 [ext_resource type="PackedScene" uid="uid://c7a1ju66q6mr" path="res://Scenes/KeyDoor.tscn" id="5_nj3qw"]
 [ext_resource type="PackedScene" uid="uid://b3v5wv6omu65q" path="res://Scenes/Spike.tscn" id="6_8802a"]
-[ext_resource type="PackedScene" uid="uid://ciuxxnb8nkal" path="res://Scenes/Sweden.tscn" id="8_eig4c"]
+[ext_resource type="PackedScene" uid="uid://ciuxxnb8nkal" path="res://Scenes/Flags/Sweden.tscn" id="8_eig4c"]
 [ext_resource type="PackedScene" uid="uid://bkqi1nu14ehfl" path="res://Scenes/HalfBrick.tscn" id="8_ej0v5"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_yvt50"]

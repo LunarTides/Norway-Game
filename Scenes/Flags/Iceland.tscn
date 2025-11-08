@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://2yi6r6blhudf"]
 
-[ext_resource type="Script" path="res://Scripts/Iceland.gd" id="1_uvmww"]
+[ext_resource type="Script" uid="uid://dp4ynqvleqbbx" path="res://Scripts/Flags/Iceland.gd" id="1_uvmww"]
 [ext_resource type="Texture2D" uid="uid://c11ajiaifxrkj" path="res://Assets/Iceland.png" id="2_efx7c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3q78"]
